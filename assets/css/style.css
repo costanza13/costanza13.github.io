@@ -167,20 +167,28 @@ article p, #contact-info ul {
 }
 
 #project2 {
+  background-image: url('../images/projects/cool-california.png');
+}
+
+#project3 {
   background-image: url('../images/projects/sig-desktop.png');
 }
 
 #project4 {
-  background-image: url('../images/projects/work-day-scheduler.png');
+  background-image: url('../images/projects/work-day-scheduler.jpg');
 }
 
 #project5 {
   background-image: url('../images/projects/runbuddy-ss.png');
 }
 
+.project:hover > .links-modal {
+  display: block;
+}
+
 .project-label {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
   background: var(--highlight);
@@ -188,6 +196,11 @@ article p, #contact-info ul {
   border-radius: 0 0 12px 12px;
   padding: 5px 10px;
   width: 100%;
+}
+
+.project-label a {
+  color: var(--text-color-normal);
+  text-decoration: none;
 }
 
 .project-label h3 {
