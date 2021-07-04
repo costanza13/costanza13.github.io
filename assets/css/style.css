@@ -145,45 +145,96 @@ article p, #contact-info ul {
 
 /* default layout for project screenshots */
 .project {
-  display: flex;
-  justify-content: stretch;
   align-items: flex-end;
-  background: #eee;
   background-size: cover;
   border: 4px solid var(--bgcolor-dark);
   border-radius: 16px;
-  flex: 1 40%;
-  height: 300px;
-  margin: 5px;
   color: var(--text-color-normal);
-  text-decoration: none;
+  display: flex;
+  flex: 1 40%;
+  flex-direction: column;
+  height: 300px;
+  justify-content: stretch;
+  margin: 5px;
+  overflow: hidden;
+}
+
+.project .screenshot {
+  background: #eee;
+  background-size: cover;
+  color: var(--text-color-normal);
+  display: block;
+  height: 100%;
+  text-align: center;
+  width: 100%;
 }
 
 /* make first project larger than the rest */
 #project1 {
   flex: 1 100%;
-  background-image: url('../images/projects/techdirt-ss.png');
   height: 400px;
 }
 
-#project2 {
+#project1 .screenshot {
+  background-image: url('../images/projects/techdirt-ss.png');
+}
+
+#project2 .screenshot {
   background-image: url('../images/projects/cool-california.png');
 }
 
-#project3 {
+#project3 .screenshot {
   background-image: url('../images/projects/sig-desktop.png');
 }
 
-#project4 {
+#project4 .screenshot {
   background-image: url('../images/projects/work-day-scheduler.jpg');
 }
 
-#project5 {
+#project5 .screenshot {
   background-image: url('../images/projects/runbuddy-ss.png');
 }
 
-.project:hover > .links-modal {
-  display: block;
+.links {
+  background: var(--highlight);
+  border-radius: 0 0 10px 10px;
+  color: var(--text-color-normal);
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 5px 30px;
+  text-align: center;
+}
+
+#project1 .links {
+  top: 280px;
+}
+
+.links li {
+  line-height: 1.5;
+}
+
+.links sup i {
+  font-size: 60%;
+  padding: 0 0 0 3px;
+}
+
+.links sup {
+  vertical-align: text-top;
+  line-height: 2.2;
+}
+
+.links a {
+  color: var(--text-color-normal);
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: white;
+}
+
+.screenshot:hover .links, .screenshot:focus .links {
+  display: inline-block;
 }
 
 .project-label {
