@@ -1,0 +1,361 @@
+:root {
+  --independence: #445876ff;
+  --platinum: #ebebebff;
+  --platinum-op: rgba(235, 235, 235, 0.95);
+  --ash-gray: #cad2c5ff;
+  --forest-green-traditional: #0A3200;
+
+  --bgcolor-dark: #0a2f67;
+  --text-color-light: var(--platinum);
+  --bgcolor-light: var(--platinum);
+  --bgcolor-light-op: rgb(249 252 255 / 95%);
+  --highlight: var(--ash-gray);
+  --text-color-dark: var(--forest-green-traditional);
+  --font-headings: 'Averia Serif Libre', Didot;
+  --font-normal: 'Cairo', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-normal);
+  background-color: var(--bgcolor-dark);
+  color: var(--text-color-dark);
+  max-width: 1200px;
+  margin: 0;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  background-image: url('./images/truckee-boardwalk.jpeg');
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.profile-photo {
+  display: flex;
+}
+
+.profile-photo img {
+  border: 1px solid var(--bgcolor-dark);
+  border-radius: 16px;
+  flex: 1 40%;
+  margin: 1rem auto;
+  max-width: 200px;
+}
+
+section {
+  background-color: var(--bgcolor-light-op);
+  /* border: 1px solid var(--bgcolor-dark); */
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+  padding: 20px;
+}
+
+.section-heading {
+  border-bottom: 1px solid var(--bgcolor-dark);
+  flex-basis: 20%;
+  font-family: var(--font-headings);
+  font-size: calc(22px + 1vw);
+  justify-content: space-around;
+  padding: 1rem 1rem 0 0;
+  text-align: center;
+  width: 100%;
+}
+
+.section-heading h2 {
+  font-size: calc(22px + 1vw);
+}
+
+section p {
+  list-style: none;
+  padding: 1rem;
+}
+
+.section-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 80%;
+  justify-content: space-around;
+  padding: 1rem 0;
+}
+
+/* default layout for project screenshots */
+.project {
+  align-items: flex-end;
+  background: #eee;
+  border: 1px solid var(--bgcolor-dark);
+  border-radius: 8px;
+  flex: 1 40%;
+  justify-content: stretch;
+  margin: 0.5rem 0.5vw;
+  min-width: 300px;
+  max-width: 385px;
+  overflow: hidden;
+  text-decoration: none;
+  width: 90%;
+}
+
+.project .screenshot {
+  background-size: cover;
+  height: 300px;
+  position: relative;
+}
+
+.expand-modal {
+  display: none;
+}
+
+.project .screenshot:hover > .expand-modal {
+  background-color: rgba(255, 255, 255, 0.7);;
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.expand-modal > .expand-button {
+  /* background-color: rgba(0, 0, 0, 1);; */
+  border-radius: 8px;
+  color: rgba(83, 81, 81, 0.8);
+  cursor: pointer;
+  font-weight: bold;
+  left: 50%;
+  padding: 0.2rem;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.project1 .screenshot { background-image: url('./images/projects/kara-ok-corral-mobile.png'); }
+.project2 .screenshot { background-image: url('./images/projects/techdirt-mobile.png'); }
+.project3 .screenshot { background-image: url('./images/projects/cool-california-mobile.png'); }
+.project4 .screenshot { background-image: url('./images/projects/should-i-go-mobile.png'); }
+.project5 .screenshot { background-image: url('./images/projects/budget-tracker-mobile.png'); }
+.project6 .screenshot { background-image: url('./images/projects/note-taker-mobile.png'); }
+
+.project1.lg { background-image: url('./images/projects/kara-ok-corral-desktop.png'); }
+.project2.lg { background-image: url('./images/projects/techdirt-desktop.png'); }
+.project3.lg { background-image: url('./images/projects/cool-california-desktop.png'); }
+.project4.lg { background-image: url('./images/projects/should-i-go-desktop.png'); }
+.project5.lg { background-image: url('./images/projects/budget-tracker-desktop.png'); }
+.project6.lg { background-image: url('./images/projects/note-taker-desktop.png'); }
+
+.project5.lg {
+  background-position-x: center;
+}
+
+.links {
+  font-weight: bold;
+  padding: 1rem 4rem;
+  text-align: center;
+}
+
+.links a {
+  color: var(--text-color-dark);
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.project-label {
+  border: 1px solid var(--text-color-dark);
+  background: var(--bgcolor-dark);
+  color: var(--text-color-light);
+  opacity: 0.98;
+  border-radius: 0 0 8px 8px;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+.project-label a {
+  color: var(--text-color-light);
+  text-decoration: none;
+}
+
+.project-label h3 {
+  flex: 1 60%;
+  font-size: 150%;
+  line-height: 1.5;
+  padding: 0;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.project-label p {
+  flex: 2 40%;
+  font-size: 80%;
+  font-weight: bold;
+  line-height: 1.2;
+  padding: 0.1rem;
+  text-align: right;
+  text-decoration: none;
+}
+
+.project-links {
+  float: right;
+}
+
+.project-links i {
+  margin-left: 0.5rem;
+}
+
+.project-spotlight {
+  background-color: var(--bgcolor-dark);
+  border: 1px solid var(--text-color-dark);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  left: 50%;
+  padding: 1rem;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  z-index: 999;
+}
+
+.project-spotlight .screenshot {
+  background-size: cover;
+  border: 1px solid var(--bgcolor-dark);
+  border-radius: 8px;
+  clear: both;
+  display: block;
+  height: 300px;
+  margin: 0 auto 1rem;
+  max-width: 100%;
+}
+
+.project-spotlight > .project-info {
+  background-color: #ffffff;
+  border: 1px solid var(--bgcolor-dark);
+  border-radius: 8px;
+  color: var(--text-color-dark);
+  padding: 0.5rem calc(0.5rem + 1vw);
+  overflow-y: scroll;
+}
+
+.close-modal {
+  background-color: var(--bgcolor-dark);
+  border-radius: 0 0 0 8px;
+  color: var(--highlight);
+  padding: 0 0 0.5rem 0.75rem;
+  position: absolute;
+  right: 0.8rem;
+  text-align: right;
+}
+
+.form-wrap {
+  text-align: center;
+  width: 100%;
+}
+
+ul.links {
+  align-items: center;
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+  list-style: none;
+  justify-content: space-around;
+  width: 100%;
+  padding: 5px;
+}
+
+.fas {
+  text-decoration: none;
+}
+
+/* modify the layout for ipad-sized screens */
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0 auto;
+  }
+
+  main {
+    padding: 2rem;
+  }
+
+  .profile-photo {
+    float: right;
+    padding: 1rem;
+  }
+  
+  section {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .section-heading {
+    border-bottom: none;
+    border-right: 1px solid var(--bgcolor-dark);
+    flex-basis: 20%;
+    font-size: 36px;
+    padding-top: 5rem;
+    text-align: right;
+    min-width: 6em;
+    max-width: 6em;
+    width: 20%;
+  }
+
+  .section-heading h2 {
+    font-size: 36px;
+  }
+
+  .project {
+    margin: 1rem 2vw;
+  }
+
+  .project-spotlight {
+    height: auto;
+    padding: 1rem;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    z-index: 999;
+  }
+
+  ul.links {
+    flex-basis: 70%;
+    flex-direction: row;
+  }
+}
+
+/* modify the layout for laptop/desktop screens */
+@media screen and (min-width: 1000px) {
+  .section-heading h2 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+    border-radius: 5px;
+  }
+}
