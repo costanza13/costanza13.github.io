@@ -1,49 +1,19 @@
-# Portfolio
-A professional portfolio page to spotlight my work as a full stack web developer for potential employers. The page is designed to meet the critera listed below...
+# Michael Costanza's Portfolio
 
-- Check it out, here: https://costanza13.github.io/portfolio/
+A bit of background, some samples of my work, and contact information, presented as a single-page application, built using React.
 
-## User Story
+[See the portfolio >>](https://costanza13.github.io)
 
-```
-AS AN employer
+## Features/Functionality
 
-I WANT to view a potential employee's deployed portfolio of work samples
+- The portfolio loads in the "About" view, and presents 4 navigation links in the header to switch between the About, Portfolio, Contact and Resumé views. Clicking these links loads the view, and appends the corresponding anchor to the URL (e.g., "#portfolio") -- the page is not fetched from the server. The name in the header is a link to the root URI and can be used to reload the app.
 
-SO THAT I can review samples of their work and assess whether they're a good candidate for an open position
-```
+- The footer displays icons that link to my LinkedIn, GitHub and Facebook profiles.
 
-## Acceptance Criteria
+- The Portfolio view presents an overview of a selection of projects I've worked on, each project component including a screenshot, links to the deployed app and associated GitHub repository (where apporpriate), and a list of some of the technologies used on the project. Mousing over the screenshot (or tapping on it on mobile) will reveal a control to view more information on the project -- called the ProjectSpotlight.
 
-```
-GIVEN I need to sample a potential employee's previous work
+- Contact link opens the contact form view (currently not hooked up). Visitors can use the form or the links below it to reach me. The contact form includes some input validation and displays an error message if any of the form fields are not completed correctly.
 
-WHEN I load their portfolio
-THEN I am presented with the developer's name, a recent photo, and links to sections about them, their work, and how to contact them
+- The Resumé view show a list of my skills and proficiencies, along with an embedded copy of my resumé and a link to view or download a PDF copy. *Note: I attempted to embed my PDF resumé using `react-pdf`, but I was unable to get it to work in the built version of the page. For now, I've included images instead.
 
-WHEN I click one of the links in the navigation
-THEN the UI scrolls to the corresponding section
-
-WHEN I click on the link to the section about their work
-THEN the UI scrolls to a section with titled images of the developer's applications
-
-WHEN I am presented with the developer's first application
-THEN that application's image should be larger in size than the others
-
-WHEN I click on the images of the applications
-THEN I am taken to that deployed application
-
-WHEN I resize the page or view the site on various screens and devices
-THEN I am presented with a responsive layout that adapts to my viewport
-```
-
-## Technologies Used
-- HTML5
-- CSS3
-- Flexbox
-- @Media queries
-
-
-## Screenshots
-
-<img src="./assets/images/screenshot-desktop.png" alt="desktop" width="65%" /> <img src="./assets/images/screenshot-mobile.png" alt="mobile" width="26%">
+![Michael Costanza's Portfoliio](public/assets/images/portfolio-ss.png)
